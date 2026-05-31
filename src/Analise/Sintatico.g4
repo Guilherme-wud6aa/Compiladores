@@ -21,5 +21,5 @@ cmdWrite: WRITE ABPAR listW FPAR;
 listW: elemW | elemW VIG listW;
 elemW: expr| CADEIA;
 cmdAtrib: IDENTIFIER ATRIB expr;
-expr: expr OPMULT expr | expr OPAD expr | expr OPREL expr | valor ;
-valor: IDENTIFIER | CTE | ABPAR expr FPAR|  TRUE | FALSE | OPNEG valor| CADEIA;
+expr: expr OPMULT expr | expr OPAD expr | expr OPREL expr | expr OPLOG expr | valor ;
+valor: IDENTIFIER | CTE | ABPAR expr FPAR | TRUE | FALSE | OPNEG valor;
