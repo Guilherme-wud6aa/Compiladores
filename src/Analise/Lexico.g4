@@ -1,18 +1,14 @@
 lexer grammar Lexico;
 
+ options {
+    caseInsensitive = true;
+ }
+
 @lexer::members{
     private void erro(){
         throw new RuntimeException(
             "Erro na linha: " + getLine()
-        )
-    }
-
-    private void sucesso(){
-    for(n in tokens){
-        System.out.println("Token" + getText())
-        System.out.println("Tipo" + getType())
-        System.out.println("Valor" + getValue())
-        }
+        );
     }
 }
 //Palavras reservadas
@@ -74,7 +70,7 @@ ATRIB: ':=';
 //Identificadores e constantes
 
 IDENTIFIER: ([a-zA-Z][a-zA-Z0-9]*){
-    if(getText().length > 16){
+    if(getText().length() > 16){
         setText(getText().substring(0,16));
     }
 };
@@ -82,23 +78,21 @@ IDENTIFIER: ([a-zA-Z][a-zA-Z0-9]*){
 CTE: [+-]?[0-9]+
 {
  int valor = Integer.parseInt(getText());
- if (valor <-37268 && valor > 32767){
-    throw new RunTimeException(
+ if (valor < -32768 || valor > 32767){
+    throw new RuntimeException(
     "Erro na linha: " + getLine()
-    )
+    );
  }
 };
 
 //Comentários e Cadeia
 
-COMENT: '/' ~('/')* '/';
+COMENT: '/' ~('/')* '/' -> skip;
 CADEIA: '"' ~('"')* '"';
 
 //Espaços em branco
 
-VAZIO: [ \n]+ -> skip;
+VAZIO: [ \t\r\n]+ -> skip;
 
 //Erro e Sucesso
-ERRO: .{erro()} ;
-
-SUCESSO: END {sucesso()};
+ERRO: .{erro(); };
