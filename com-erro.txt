@@ -1,0 +1,4 @@
+program erro ;
+  begin
+      x := @1
+  end.

@@ -14,7 +14,7 @@ tip: INTEGER | BOOLEAN | STRING;
 cmdComp: BEGIN listCmd END;
 listCmd: cmd | cmd PVIG listCmd;
 cmd: cmdIf | cmdWhile | cmdRead | cmdWrite | cmdAtrib | cmdComp;
-cmdIf: IF expr THEN cmd| IF expr THEN cmd ELSE cmd;
+cmdIf: IF expr THEN cmd (ELSE cmd)?;
 cmdWhile: WHILE expr DO cmd;
 cmdRead: READ ABPAR listId FPAR;
 cmdWrite: WRITE ABPAR listW FPAR;
