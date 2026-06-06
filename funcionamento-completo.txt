@@ -3,11 +3,9 @@ var
     x, y : integer ;
     nome : string ;
 begin
-    read(x, y) ;
+    read(x, y);
     if x > 0 then
-        write("x eh positivo")
-    else
-        write("x eh negativo") ;
+        write("x eh positivo");
     while x > 0 do
         x := x - 1 ;
     write(x, y)

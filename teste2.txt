@@ -1,0 +1,6 @@
+program teste ;
+begin
+    x := -20 + 10;
+    y := 20;
+    write(x, y)
+end.
