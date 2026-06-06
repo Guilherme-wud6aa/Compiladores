@@ -67,6 +67,7 @@ ABPAR: '(';
 FPAR: ')';
 ATRIB: ':=';
 
+
 //Identificadores e constantes
 
 IDENTIFIER: ([a-zA-Z][a-zA-Z0-9]*){

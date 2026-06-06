@@ -32,7 +32,6 @@ COMENT=31
 CADEIA=32
 VAZIO=33
 ERRO=34
-SUCESSO=35
 'program'=1
 'begin'=2
 'end'=3
