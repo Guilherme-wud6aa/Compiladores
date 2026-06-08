@@ -4,10 +4,14 @@ var
     nome : string ;
 begin
     read(x, y);
-    if x > 0 then
+    if (x > 0) then {
         write("x eh positivo");
         read(z);
-    while x > 0 do
-        x := x - 1 ;
-    write(x, y)
+   } else {
+	  write("x eh negativo");
+   }
+    while (x > 0) do {
+        x := x - 1;
+   }
+    write(x, y);
 end.
