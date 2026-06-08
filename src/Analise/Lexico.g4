@@ -66,7 +66,8 @@ VIG: ',';
 ABPAR: '(';
 FPAR: ')';
 ATRIB: ':=';
-
+ABCHAV: '{';
+FCHAV: '}';
 
 //Identificadores e constantes
 
