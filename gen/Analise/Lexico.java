@@ -1,4 +1,4 @@
-// Generated from C:/Users/guilh/IdeaProjects/compiladores/src/Analise/Lexico.g4 by ANTLR 4.13.2
+// Generated from C:/Users/guilh/IdeaProjects/Compiladores/src/Analise/Lexico.g4 by ANTLR 4.13.2
 package Analise;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
